@@ -5,10 +5,31 @@ Supports object detection and classification using locally downloaded models.
 
 import os
 import torch
-import rospy
 import numpy as np
 from PIL import Image
 from pathlib import Path
+
+# Optional rospy import - only needed when running in ROS context
+try:
+    import rospy
+    HAS_ROSPY = True
+except ImportError:
+    HAS_ROSPY = False
+    # Mock rospy logging functions for standalone use
+    class _MockRospy:
+        @staticmethod
+        def loginfo(msg):
+            print(f"[INFO] {msg}")
+        @staticmethod
+        def logwarn(msg):
+            print(f"[WARN] {msg}")
+        @staticmethod
+        def logerr(msg):
+            print(f"[ERROR] {msg}")
+        @staticmethod
+        def logdebug(msg):
+            pass  # Silent in non-ROS mode
+    rospy = _MockRospy()
 
 
 class LocalModelHandler:

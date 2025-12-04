@@ -2,6 +2,13 @@
 """
 Script to download Hugging Face models for offline use.
 Downloads DETR model for object detection of tableware.
+
+Usage:
+    python3 download_model.py
+    
+For manual downloads from Python:
+    from image_bridge.local_model_handler import download_model
+    download_model("facebook/detr-resnet-50", "~/ros_ws/models")
 """
 
 import os
@@ -12,7 +19,14 @@ from pathlib import Path
 src_path = Path(__file__).parent.parent / "src"
 sys.path.insert(0, str(src_path))
 
-from image_bridge.local_model_handler import download_model
+try:
+    from image_bridge.local_model_handler import download_model
+except ImportError as e:
+    print(f"Error importing local_model_handler: {e}")
+    print("\nPlease make sure the required packages are installed:")
+    print("  cd ~/ros_ws/src/image_bridge")
+    print("  pip3 install -r requirements.txt")
+    sys.exit(1)
 
 
 def main():
