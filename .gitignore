@@ -1,1 +1,25 @@
 TIAGo-development-computer-ubuntu-20.04.tar.gz
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# ROS
+workspace/build/
+workspace/devel/
+workspace/install/
+workspace/.catkin_workspace
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Debug images
+workspace/data/bridge_debug/
