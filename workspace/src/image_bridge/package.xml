@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>image_bridge</name>
+  <version>1.0.0</version>
+  <description>
+    ROS node that serves as middleware communication between Tiago robot (Gazebo simulation)
+    and Hugging Face AI models for autonomous object rearrangement.
+  </description>
+  
+  <maintainer email="alex@example.com">Alex NGUEMNIN</maintainer>
+  <license>MIT</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <!-- ROS core dependencies -->
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  
+  <!-- Image processing -->
+  <depend>cv_bridge</depend>
+  <depend>image_transport</depend>
+  
+  <!-- Message generation -->
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
+  
+  <!-- Python dependencies (installed via pip) -->
+  <exec_depend>python3-opencv</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
+  
+</package>

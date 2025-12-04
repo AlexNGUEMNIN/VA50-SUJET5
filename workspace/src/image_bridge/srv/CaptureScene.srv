@@ -1,0 +1,13 @@
+# CaptureScene.srv - Service to capture and send current scene to AI model
+
+# Request
+bool capture_rgb       # Capture RGB image
+bool capture_depth     # Capture depth image
+string model_endpoint  # Optional: specific model endpoint to send to
+
+---
+# Response
+bool success
+string message
+sensor_msgs/Image rgb_image
+sensor_msgs/Image depth_image

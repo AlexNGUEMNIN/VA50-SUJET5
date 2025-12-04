@@ -1,0 +1,15 @@
+# GetTargetPoses.srv - Service to get target object poses after processing
+
+# Request
+sensor_msgs/Image current_image    # Current scene image
+sensor_msgs/Image target_image     # Target arrangement image
+string[] object_classes            # List of object classes to match
+
+---
+# Response
+bool success
+string message
+geometry_msgs/PoseArray target_poses  # Estimated target poses for objects
+string[] object_ids                   # Corresponding object IDs
+float32[] confidence_scores           # Confidence for each pose
+sensor_msgs/Image annotated_image     # Image with poses visualized

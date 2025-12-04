@@ -1,0 +1,46 @@
+# Image Bridge Node Configuration Parameters
+
+# Hugging Face API Configuration
+huggingface:
+  api_url: "https://api-inference.huggingface.co"
+  # Note: API token should be set via environment variable HUGGINGFACE_API_TOKEN
+
+# AI Model Endpoints
+models:
+  clip: "openai/clip-vit-base-patch32"
+  mask_rcnn: "facebook/maskformer-swin-base-coco"
+  diffusion: "stabilityai/stable-diffusion-2-1"
+  captioning: "Salesforce/blip-image-captioning-base"
+
+# ROS Topics Configuration
+topics:
+  # Input topics from robot
+  rgb_input: "/xtion/rgb/image_raw"
+  depth_input: "/xtion/depth/image_raw"
+  
+  # Input from AI models
+  ai_generated: "/ai_model/generated_image"
+  
+  # Output topics
+  to_ai_model: "/image_bridge/to_ai_model"
+  to_robot: "/image_bridge/to_robot"
+  segmentation_masks: "/image_bridge/segmentation_masks"
+  status: "/image_bridge/status"
+
+# Buffer and Performance Settings
+buffer_size: 10  # Number of images to keep in circular buffer
+publish_rate: 10.0  # Hz - Rate for status publishing
+request_timeout: 30.0  # seconds - Timeout for API requests
+
+# Image Processing Settings
+image_encoding: "bgr8"  # Default encoding for ROS images
+image_max_size: 640  # Maximum image dimension (pixels) for processing
+
+# Debug Settings
+save_debug_images: false  # Enable to save images for debugging
+debug_image_path: "~/ros_ws/data/bridge_debug"  # Path for debug images
+
+# Generation Parameters (defaults)
+generation:
+  guidance_scale: 7.5  # Classifier-free guidance scale
+  num_inference_steps: 50  # Number of denoising steps

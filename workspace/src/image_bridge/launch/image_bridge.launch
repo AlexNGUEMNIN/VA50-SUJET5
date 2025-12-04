@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Image Bridge Node Launch File -->
+  
+  <!-- Arguments -->
+  <arg name="node_name" default="image_bridge_node" />
+  <arg name="config_file" default="$(find image_bridge)/config/params.yaml" />
+  <arg name="output" default="screen" />
+  <arg name="respawn" default="false" />
+  
+  <!-- Load parameters from YAML file -->
+  <rosparam command="load" file="$(arg config_file)" ns="$(arg node_name)" />
+  
+  <!-- Launch the image bridge node -->
+  <node 
+    name="$(arg node_name)" 
+    pkg="image_bridge" 
+    type="image_bridge_node.py" 
+    output="$(arg output)"
+    respawn="$(arg respawn)"
+  >
+    <!-- Node-specific parameters can be overridden here -->
+    <!-- Example: <param name="buffer_size" value="20" /> -->
+  </node>
+  
+  <!-- Optional: Launch RViz for visualization -->
+  <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find image_bridge)/config/image_bridge.rviz" /> -->
+  
+</launch>

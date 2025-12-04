@@ -1,0 +1,16 @@
+# RequestGeneration.srv - Service to request image generation from AI model
+
+# Request
+string prompt               # Text prompt for image generation
+sensor_msgs/Image source_image  # Optional source image for conditioning
+string model_name           # Model to use (e.g., "dall-e", "stable-diffusion")
+float32 guidance_scale      # Guidance scale for diffusion (default: 7.5)
+int32 num_inference_steps   # Number of inference steps (default: 50)
+
+---
+# Response
+bool success
+string message
+sensor_msgs/Image generated_image
+string generation_id        # Unique ID for this generation
+float32 inference_time      # Time taken for generation in seconds
