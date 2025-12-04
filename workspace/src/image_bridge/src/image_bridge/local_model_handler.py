@@ -28,7 +28,9 @@ except ImportError:
             print(f"[ERROR] {msg}")
         @staticmethod
         def logdebug(msg):
-            pass  # Silent in non-ROS mode
+            # Debug logs are silently suppressed in standalone mode
+            # to reduce verbosity when not running in ROS context
+            pass
     rospy = _MockRospy()
 
 

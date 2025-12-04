@@ -33,6 +33,6 @@ def __getattr__(name):
     elif name == 'LocalModelHandler':
         from .local_model_handler import LocalModelHandler
         return LocalModelHandler
-    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}. Available: {', '.join(__all__)}")
 
 __all__ = ['Config', 'ImageUtils', 'HuggingFaceClient', 'ROSInterface', 'LocalModelHandler']

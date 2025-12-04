@@ -67,11 +67,29 @@ rosrun image_view image_view image:=/tiago/annotated_image
 
 ## ⚠️ Problèmes courants
 
+### "ModuleNotFoundError: No module named 'image_bridge'"
+```bash
+# Solution 1: Installer les dépendances Python
+cd ~/ros_ws/src/image_bridge
+pip3 install -r requirements.txt
+
+# Solution 2: Vérifier le chemin du script
+cd ~/ros_ws/src/image_bridge/scripts
+python3 download_model.py
+```
+
 ### "Model not found"
 ```bash
 # Re-télécharger le modèle
 cd ~/ros_ws/src/image_bridge/scripts
 python3 download_model.py
+```
+
+### "No module named 'torch'" ou autres dépendances manquantes
+```bash
+# Installer toutes les dépendances requises
+cd ~/ros_ws/src/image_bridge
+pip3 install -r requirements.txt
 ```
 
 ### "No images available"

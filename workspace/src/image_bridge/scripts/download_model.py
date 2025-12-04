@@ -24,7 +24,7 @@ try:
 except ImportError as e:
     print(f"Error importing local_model_handler: {e}")
     print("\nPlease make sure the required packages are installed:")
-    print("  cd ~/ros_ws/src/image_bridge")
+    print(f"  cd {Path(__file__).parent.parent}")
     print("  pip3 install -r requirements.txt")
     sys.exit(1)
 
