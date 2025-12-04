@@ -16,6 +16,10 @@ class ObjectDetectionExample:
     Exemple d'utilisation du système de détection pour organiser des objets.
     """
     
+    # Configuration constants pour l'organisation
+    FORK_LEFT_OFFSET = 0.15   # Décalage à gauche pour les fourchettes
+    KNIFE_RIGHT_OFFSET = 0.15  # Décalage à droite pour les couteaux
+    
     def __init__(self):
         """Initialiser l'exemple."""
         rospy.init_node('object_detection_example', anonymous=True)
@@ -68,7 +72,7 @@ class ObjectDetectionExample:
             for fork in forks:
                 rospy.loginfo(f"  Position actuelle: ({fork['center_x']:.1f}, {fork['center_y']:.1f})")
                 # Position cible: à gauche de l'assiette
-                target_x = fork['normalized_x'] - 0.15  # 15% à gauche
+                target_x = fork['normalized_x'] - self.FORK_LEFT_OFFSET
                 rospy.loginfo(f"  → Déplacer vers: normalized_x={target_x:.2f}")
         
         # Couteaux - à droite
@@ -77,7 +81,7 @@ class ObjectDetectionExample:
             for knife in knives:
                 rospy.loginfo(f"  Position actuelle: ({knife['center_x']:.1f}, {knife['center_y']:.1f})")
                 # Position cible: à droite de l'assiette
-                target_x = knife['normalized_x'] + 0.15  # 15% à droite
+                target_x = knife['normalized_x'] + self.KNIFE_RIGHT_OFFSET
                 rospy.loginfo(f"  → Déplacer vers: normalized_x={target_x:.2f}")
         
         # Assiettes - au centre

@@ -39,11 +39,11 @@ class LocalModelHandler:
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         rospy.loginfo(f"Using device: {self.device}")
         
-        # Object classes we care about (tableware)
+        # Classes d'objets qui nous intéressent (vaisselle et couverts)
         self.target_classes = [
-            'fork', 'knife', 'spoon',  # Cutlery
-            'bowl', 'cup', 'plate', 'dish',  # Dishware
-            'bottle', 'wine glass', 'dining table'  # Related objects
+            'fork', 'knife', 'spoon',  # Cutlery / Couverts
+            'bowl', 'cup', 'plate', 'dish',  # Dishware / Vaisselle
+            'bottle', 'wine glass', 'dining table'  # Related objects / Objets liés
         ]
         
         rospy.loginfo(f"Model cache directory: {self.model_cache_dir}")
@@ -144,8 +144,12 @@ class LocalModelHandler:
             for score, label, box in zip(results["scores"], results["labels"], results["boxes"]):
                 label_name = self.detection_model.config.id2label[label.item()]
                 
-                # Filter for tableware objects
-                if any(target in label_name.lower() for target in self.target_classes):
+                # Filter for tableware objects - use exact word matching
+                label_lower = label_name.lower()
+                if any(label_lower == target.lower() or 
+                       label_lower.startswith(target.lower() + ' ') or
+                       label_lower.endswith(' ' + target.lower())
+                       for target in self.target_classes):
                     detection = {
                         'label': label_name,
                         'score': score.item(),

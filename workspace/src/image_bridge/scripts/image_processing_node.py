@@ -47,6 +47,7 @@ class ImageProcessingNode:
         
         # Configuration
         self.confidence_threshold = rospy.get_param('~confidence_threshold', 0.7)
+        self.frame_id = rospy.get_param('~camera_frame_id', 'xtion_rgb_optical_frame')
         self.images_dir = Path(rospy.get_param(
             '~images_dir', 
             os.path.expanduser('~/ros_ws/data/images')
@@ -56,6 +57,9 @@ class ImageProcessingNode:
             os.path.expanduser('~/ros_ws/data/results')
         ))
         self.results_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Visual constants
+        self.DETECTION_BOX_COLOR = (0, 255, 0)  # Green in BGR
         
         # Publishers
         self.detections_pub = rospy.Publisher(
@@ -164,13 +168,12 @@ class ImageProcessingNode:
             
             # Draw bounding box
             x_min, y_min, x_max, y_max = map(int, box)
-            color = (0, 255, 0)  # Green
-            cv2.rectangle(annotated, (x_min, y_min), (x_max, y_max), color, 2)
+            cv2.rectangle(annotated, (x_min, y_min), (x_max, y_max), self.DETECTION_BOX_COLOR, 2)
             
             # Draw label
             text = f"{label}: {score:.2f}"
             cv2.putText(annotated, text, (x_min, y_min - 10),
-                       cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
+                       cv2.FONT_HERSHEY_SIMPLEX, 0.5, self.DETECTION_BOX_COLOR, 2)
         
         return annotated
     
@@ -200,7 +203,7 @@ class ImageProcessingNode:
         pose_array = PoseArray()
         pose_array.header = Header()
         pose_array.header.stamp = rospy.Time.now()
-        pose_array.header.frame_id = "xtion_rgb_optical_frame"
+        pose_array.header.frame_id = self.frame_id
         
         for pos in positions:
             pose = Pose()

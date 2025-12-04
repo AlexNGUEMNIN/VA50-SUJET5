@@ -10,8 +10,9 @@
     <param name="images_dir" value="$(env HOME)/ros_ws/data/images" />
     <param name="results_dir" value="$(env HOME)/ros_ws/data/results" />
     
-    <!-- Camera Topic -->
+    <!-- Camera Configuration -->
     <param name="camera_topic" value="/xtion/rgb/image_raw" />
+    <param name="camera_frame_id" value="xtion_rgb_optical_frame" />
   </node>
   
   <!-- Optional: Launch RViz for visualization -->

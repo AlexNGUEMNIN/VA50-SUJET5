@@ -14,4 +14,6 @@ numpy>=1.21.0
 requests>=2.28.0
 
 # Optional: For GPU support (uncomment if CUDA is available)
+# Note: Replace cu118 with your CUDA version (cu118=11.8, cu121=12.1, etc.)
+# Check your CUDA version with: nvcc --version
 # Install with: pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
