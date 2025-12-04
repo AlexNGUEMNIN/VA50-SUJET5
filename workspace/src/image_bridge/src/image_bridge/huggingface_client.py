@@ -158,7 +158,10 @@ class HuggingFaceClient:
         Returns:
             dict: Response data with 'success', 'data' or 'error'.
         """
+        from threading import Event
+        
         start_time = time.time()
+        check_interval = 0.1  # Check every 100ms
         
         while True:
             with self.response_lock:
@@ -166,13 +169,15 @@ class HuggingFaceClient:
                     response = self.response_dict.pop(request_id)
                     return response
             
+            # Check timeout
             if timeout and (time.time() - start_time) > timeout:
                 return {
                     'success': False,
                     'error': 'Response timeout'
                 }
             
-            time.sleep(0.1)
+            # Sleep to avoid busy waiting
+            time.sleep(check_interval)
     
     def query_sync(self, model_id, payload):
         """
@@ -221,6 +226,7 @@ class HuggingFaceClient:
             model_id (str): Diffusion model ID.
             prompt (str): Text prompt.
             **kwargs: Additional parameters (guidance_scale, num_inference_steps, etc.).
+                     Note: 'inputs' key will be overwritten by the prompt.
         
         Returns:
             dict: Response with generated image data.
@@ -228,7 +234,10 @@ class HuggingFaceClient:
         payload = {
             "inputs": prompt
         }
-        payload.update(kwargs)
+        # Merge kwargs, ensuring 'inputs' is not overwritten
+        for key, value in kwargs.items():
+            if key != 'inputs':
+                payload[key] = value
         return self.query_sync(model_id, payload)
     
     def segment_image(self, model_id, image_base64):

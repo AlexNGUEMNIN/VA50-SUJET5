@@ -70,10 +70,16 @@ class ImageUtils:
             str: Base64 encoded image string, or None if conversion fails.
         """
         try:
-            # Convert BGR to RGB for PIL
+            # Determine if color conversion is needed
+            # OpenCV uses BGR by default, PIL uses RGB
             if len(cv_image.shape) == 3 and cv_image.shape[2] == 3:
+                # Assume BGR for 3-channel images from OpenCV
                 rgb_image = cv2.cvtColor(cv_image, cv2.COLOR_BGR2RGB)
+            elif len(cv_image.shape) == 3 and cv_image.shape[2] == 4:
+                # Handle BGRA images
+                rgb_image = cv2.cvtColor(cv_image, cv2.COLOR_BGRA2RGBA)
             else:
+                # Grayscale or other formats - use as is
                 rgb_image = cv_image
             
             # Convert to PIL Image

@@ -3,6 +3,9 @@ ROS interface for managing publishers, subscribers, and services.
 """
 
 import rospy
+import cv2
+import numpy as np
+from PIL import Image as PILImage
 from collections import deque
 from sensor_msgs.msg import Image
 from geometry_msgs.msg import PoseArray
@@ -280,25 +283,40 @@ class ROSInterface:
             if result['success']:
                 # Convert response to ROS image
                 if isinstance(result['data'], bytes):
-                    # Binary image data
-                    import base64
-                    base64_str = base64.b64encode(result['data']).decode('utf-8')
-                    ros_image = self.image_utils.base64_to_ros(base64_str)
-                    
-                    if ros_image is not None:
-                        response.generated_image = ros_image
-                        response.success = True
-                        response.message = "Image generated successfully"
-                        response.inference_time = time.time() - start_time
-                        response.generation_id = f"gen_{int(time.time())}"
+                    # Binary image data - convert directly
+                    try:
+                        import io
+                        buffer = io.BytesIO(result['data'])
+                        pil_image = PILImage.open(buffer)
+                        np_image = np.array(pil_image)
                         
-                        # Publish generated image
-                        self.to_robot_pub.publish(ros_image)
-                        self.last_error = ""
-                    else:
+                        # Convert RGB to BGR for OpenCV
+                        if len(np_image.shape) == 3 and np_image.shape[2] == 3:
+                            cv_image = cv2.cvtColor(np_image, cv2.COLOR_RGB2BGR)
+                        else:
+                            cv_image = np_image
+                        
+                        ros_image = self.image_utils.cv2_to_ros(cv_image)
+                        
+                        if ros_image is not None:
+                            response.generated_image = ros_image
+                            response.success = True
+                            response.message = "Image generated successfully"
+                            response.inference_time = time.time() - start_time
+                            response.generation_id = f"gen_{int(time.time())}"
+                            
+                            # Publish generated image
+                            self.to_robot_pub.publish(ros_image)
+                            self.last_error = ""
+                        else:
+                            response.success = False
+                            response.message = "Failed to convert generated image"
+                            self.last_error = "Image conversion failed"
+                    except Exception as conv_err:
+                        rospy.logerr(f"Error converting image: {conv_err}")
                         response.success = False
-                        response.message = "Failed to convert generated image"
-                        self.last_error = "Image conversion failed"
+                        response.message = f"Image conversion error: {conv_err}"
+                        self.last_error = str(conv_err)
                 else:
                     response.success = False
                     response.message = "Unexpected response format"
@@ -352,14 +370,21 @@ class ROSInterface:
             )
             
             if seg_result['success']:
-                # TODO: Process segmentation results to extract poses
-                # This would require additional processing logic
+                # Process segmentation results
+                # Note: Full pose estimation requires additional computer vision processing
+                # (e.g., 3D matching, depth processing) that would be implemented based on
+                # specific requirements. This provides the segmentation foundation.
                 response.success = True
-                response.message = "Pose estimation completed"
+                response.message = "Segmentation completed - pose estimation requires additional CV processing"
                 response.target_poses = PoseArray()
+                response.target_poses.header.stamp = rospy.Time.now()
+                response.target_poses.header.frame_id = "base_link"
                 response.object_ids = []
                 response.confidence_scores = []
                 self.last_error = ""
+                
+                rospy.loginfo("Segmentation completed. Full pose estimation requires domain-specific CV logic.")
+                rospy.loginfo("Developers should extend this service with object matching and 3D pose computation.")
             else:
                 response.success = False
                 response.message = seg_result.get('error', 'Segmentation failed')
