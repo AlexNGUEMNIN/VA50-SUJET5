@@ -1,0 +1,44 @@
+# Configuration exemple pour le nœud de traitement d'images
+# Copiez ce fichier et modifiez selon vos besoins
+
+# Modèle de détection à utiliser
+# Options:
+#   - facebook/detr-resnet-50 (recommandé, équilibre vitesse/précision)
+#   - facebook/detr-resnet-101 (plus précis mais plus lent)
+#   - hustvl/yolos-tiny (plus rapide mais moins précis)
+detection_model: "facebook/detr-resnet-50"
+
+# Seuil de confiance pour les détections (0.0 - 1.0)
+# Plus élevé = moins de détections mais plus fiables
+# Plus bas = plus de détections mais plus de faux positifs
+confidence_threshold: 0.7
+
+# Répertoires
+images_dir: "~/ros_ws/data/images"
+results_dir: "~/ros_ws/data/results"
+
+# Topic de caméra pour traitement en temps réel
+# Mettre en commentaire pour désactiver le traitement temps réel
+camera_topic: "/xtion/rgb/image_raw"
+
+# Classes d'objets à détecter (défini dans le code)
+# Le modèle DETR peut détecter 91 classes COCO dont:
+#   - Couverts: fork, knife, spoon
+#   - Vaisselle: plate, bowl, cup, wine glass
+#   - Table: dining table
+#   - Autres: bottle, etc.
+
+# Configuration avancée (dans le code)
+# Pour modifier les classes détectées, éditez:
+#   workspace/src/image_bridge/src/image_bridge/local_model_handler.py
+#   Ligne ~46: self.target_classes = [...]
+
+# Performance
+# Pour CPU lent: utiliser confidence_threshold plus élevé (0.8-0.9)
+# Pour GPU: le système détectera automatiquement CUDA
+# Pour forcer CPU: export CUDA_VISIBLE_DEVICES=""
+
+# Debug
+# Pour activer les logs détaillés:
+#   Dans le launch file, ajouter: output="screen"
+#   Ou dans le code: rospy.set_param('/rospy/log_level', 'DEBUG')

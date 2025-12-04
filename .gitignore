@@ -23,3 +23,13 @@ workspace/.catkin_workspace
 
 # Debug images
 workspace/data/bridge_debug/
+
+# Downloaded models (large files)
+workspace/models/
+*.bin
+*.onnx
+*.pt
+
+# Results and captured images (user data)
+workspace/data/images/*.png
+workspace/data/results/

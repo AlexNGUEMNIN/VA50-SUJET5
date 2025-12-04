@@ -1,5 +1,48 @@
 # ROS Scoutsan Docker
 
+---
+
+## 🆕 Système de Détection d'Objets avec Modèle Local
+
+Ce projet inclut maintenant un système complet de détection d'objets pour le robot Tiago utilisant des modèles Hugging Face en **local** (sans connexion internet après installation).
+
+### 🚀 Installation Rapide
+
+```bash
+# Depuis le conteneur Docker
+./install.sh
+```
+
+### 📖 Documentation
+
+- **[README_FR.md](README_FR.md)** - Documentation complète en français
+- **[workspace/src/image_bridge/QUICKSTART_FR.md](workspace/src/image_bridge/QUICKSTART_FR.md)** - Guide de démarrage rapide
+
+### 🎯 Fonctionnalités
+
+- Détection automatique de couverts et vaisselle (fourchettes, couteaux, assiettes, etc.)
+- Modèle de détection DETR téléchargé et exécuté localement
+- Traitement des images capturées par Tiago
+- Communication via ROS pour l'organisation autonome des objets
+- Images annotées avec boîtes de détection
+
+### 📊 Utilisation
+
+```bash
+# 1. Capturer des images
+cd ~/ros_ws/scripts && python3 capture.py
+
+# 2. Lancer le traitement
+roslaunch image_bridge image_processing.launch
+
+# 3. Traiter les images
+rosservice call /tiago/process_captured_images "{}"
+```
+
+Voir [README_FR.md](README_FR.md) pour plus de détails.
+
+---
+
 ## Building the image
 
 - Run the following command in a terminal

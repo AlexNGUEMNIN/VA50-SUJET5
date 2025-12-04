@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Image Processing Node with Local Model -->
+  <node name="image_processing_node" pkg="image_bridge" type="image_processing_node.py" output="screen">
+    <!-- Model Configuration -->
+    <param name="detection_model" value="facebook/detr-resnet-50" />
+    <param name="confidence_threshold" value="0.7" />
+    
+    <!-- Paths -->
+    <param name="images_dir" value="$(env HOME)/ros_ws/data/images" />
+    <param name="results_dir" value="$(env HOME)/ros_ws/data/results" />
+    
+    <!-- Camera Topic -->
+    <param name="camera_topic" value="/xtion/rgb/image_raw" />
+  </node>
+  
+  <!-- Optional: Launch RViz for visualization -->
+  <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find image_bridge)/config/detection_view.rviz" /> -->
+</launch>
