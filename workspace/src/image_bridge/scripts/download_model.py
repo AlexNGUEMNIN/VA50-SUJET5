@@ -15,8 +15,8 @@ import os
 import sys
 from pathlib import Path
 
-# Add the src directory to the path
-src_path = Path(__file__).parent.parent / "src"
+# Add the src directory to the path (parent/src contains the image_bridge package)
+src_path = Path(__file__).resolve().parent.parent / "src"
 sys.path.insert(0, str(src_path))
 
 try:

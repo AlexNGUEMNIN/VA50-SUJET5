@@ -1,0 +1,25 @@
+[rospy.client][INFO] 2025-12-04 20:19:26,522: init_node, name[/gripper_controllers_spawner], pid[4129]
+[xmlrpc][INFO] 2025-12-04 20:19:26,524: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-12-04 20:19:26,525: Started XML-RPC server [http://127.0.0.1:37129/]
+[rospy.init][INFO] 2025-12-04 20:19:26,525: ROS Slave URI: [http://127.0.0.1:37129/]
+[rospy.impl.masterslave][INFO] 2025-12-04 20:19:26,526: _ready: http://127.0.0.1:37129/
+[rospy.registration][INFO] 2025-12-04 20:19:26,528: Registering with master node http://localhost:11311/
+[xmlrpc][INFO] 2025-12-04 20:19:26,528: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-12-04 20:19:26,626: registered with master
+[rospy.rosout][INFO] 2025-12-04 20:19:26,627: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-12-04 20:19:26,661: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-12-04 20:19:26,667: initializing /clock core topic
+[rospy.simtime][INFO] 2025-12-04 20:19:26,686: connected to core topic /clock
+[rosout][INFO] 2025-12-04 20:19:26,745: Controller Spawner: Waiting for service controller_manager/load_controller
+[rospy.internal][INFO] 2025-12-04 20:19:26,840: topic[/clock] adding connection to [http://127.0.0.1:39931/], count 0
+[rosout][INFO] 2025-12-04 20:19:26,827: Controller Spawner: Waiting for service controller_manager/switch_controller
+[rosout][INFO] 2025-12-04 20:19:26,868: Controller Spawner: Waiting for service controller_manager/unload_controller
+[rospy.impl.masterslave][INFO] 2025-12-04 20:19:26,891: external shutdown request from [/master]: [/gripper_controllers_spawner] Reason: new node registered with same name
+[rospy.core][INFO] 2025-12-04 20:19:26,896: signal_shutdown [external shutdown request from [/master]: [[/gripper_controllers_spawner] Reason: new node registered with same name]]
+[rospy.internal][INFO] 2025-12-04 20:19:26,908: topic[/clock] removing connection to http://127.0.0.1:39931/
+[rospy.core][WARNING] 2025-12-04 20:19:26,909: add_shutdown_hook called after shutdown
+[rosout][INFO] 2025-12-04 20:19:26,909: Shutting down spawner. Stopping and unloading controllers...
+[rospy.core][INFO] 2025-12-04 20:19:27,005: signal_shutdown [signal-2]
+[rosout][WARNING] 2025-12-04 20:19:27,921: Controller Spawner couldn't reach controller_manager to take down controllers. Waited for 30 second(s).
+[rosout][INFO] 2025-12-04 20:19:27,922: Loading controller: gripper_controller
+[rospy.core][INFO] 2025-12-04 20:19:28,018: signal_shutdown [atexit]

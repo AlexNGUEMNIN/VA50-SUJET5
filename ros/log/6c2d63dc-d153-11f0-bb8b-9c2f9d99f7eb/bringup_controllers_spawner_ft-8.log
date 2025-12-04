@@ -1,0 +1,20 @@
+[rospy.client][INFO] 2025-12-04 21:54:31,418: init_node, name[/bringup_controllers_spawner_ft], pid[8936]
+[xmlrpc][INFO] 2025-12-04 21:54:31,419: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-12-04 21:54:31,419: Started XML-RPC server [http://127.0.0.1:41027/]
+[rospy.init][INFO] 2025-12-04 21:54:31,420: ROS Slave URI: [http://127.0.0.1:41027/]
+[rospy.impl.masterslave][INFO] 2025-12-04 21:54:31,420: _ready: http://127.0.0.1:41027/
+[rospy.registration][INFO] 2025-12-04 21:54:31,422: Registering with master node http://localhost:11311/
+[xmlrpc][INFO] 2025-12-04 21:54:31,422: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-12-04 21:54:31,520: registered with master
+[rospy.rosout][INFO] 2025-12-04 21:54:31,520: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-12-04 21:54:31,545: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-12-04 21:54:31,548: initializing /clock core topic
+[rospy.simtime][INFO] 2025-12-04 21:54:31,552: connected to core topic /clock
+[rosout][INFO] 2025-12-04 21:54:31,557: Controller Spawner: Waiting for service controller_manager/load_controller
+[rospy.internal][INFO] 2025-12-04 21:54:31,782: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2025-12-04 21:54:33,680: Controller Spawner: Waiting for service controller_manager/switch_controller
+[rosout][INFO] 2025-12-04 21:54:33,716: Controller Spawner: Waiting for service controller_manager/unload_controller
+[rosout][INFO] 2025-12-04 21:54:33,726: Loading controller: force_torque_sensor_controller
+[rosout][INFO] 2025-12-04 21:54:33,826: Controller Spawner: Loaded controllers: force_torque_sensor_controller
+[rosout][INFO] 2025-12-04 21:54:33,892: Started controllers: force_torque_sensor_controller
+[rospy.internal][INFO] 2025-12-04 21:54:34,599: topic[/clock] adding connection to [http://127.0.0.1:46517/], count 0

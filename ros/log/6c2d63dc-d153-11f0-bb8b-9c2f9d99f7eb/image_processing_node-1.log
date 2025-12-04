@@ -1,0 +1,1408 @@
+[rospy.client][INFO] 2025-12-04 22:01:17,328: init_node, name[/image_processing_node], pid[10502]
+[xmlrpc][INFO] 2025-12-04 22:01:17,329: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-12-04 22:01:17,330: Started XML-RPC server [http://127.0.0.1:36225/]
+[rospy.init][INFO] 2025-12-04 22:01:17,330: ROS Slave URI: [http://127.0.0.1:36225/]
+[rospy.impl.masterslave][INFO] 2025-12-04 22:01:17,330: _ready: http://127.0.0.1:36225/
+[rospy.registration][INFO] 2025-12-04 22:01:17,332: Registering with master node http://localhost:11311/
+[xmlrpc][INFO] 2025-12-04 22:01:17,332: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-12-04 22:01:17,431: registered with master
+[rospy.rosout][INFO] 2025-12-04 22:01:17,431: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-12-04 22:01:17,435: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-12-04 22:01:17,436: initializing /clock core topic
+[rospy.simtime][INFO] 2025-12-04 22:01:17,439: connected to core topic /clock
+[rosout][INFO] 2025-12-04 22:01:17,444: Initialisation du nœud de traitement d'images...
+[rosout][INFO] 2025-12-04 22:01:17,454: Using device: cpu
+[rosout][INFO] 2025-12-04 22:01:17,457: Model cache directory: /home/pal/ros_ws/models
+[rosout][INFO] 2025-12-04 22:01:17,463: Chargement du modèle: facebook/detr-resnet-50
+[rospy.internal][INFO] 2025-12-04 22:01:17,511: topic[/clock] adding connection to [http://127.0.0.1:46517/], count 0
+[rospy.internal][INFO] 2025-12-04 22:01:17,570: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2025-12-04 22:01:20,901: Loading detection model from /home/pal/ros_ws/models/facebook_detr-resnet-50
+[rosout][WARNING] 2025-12-04 22:01:20,904: Model not found locally at /home/pal/ros_ws/models/facebook_detr-resnet-50
+[rosout][INFO] 2025-12-04 22:01:20,906: Attempting to download facebook/detr-resnet-50...
+[rosout][ERROR] 2025-12-04 22:02:05,516: Failed to load detection model: 
+DetrConvEncoder requires the timm library but it was not found in your environment. You can install it with pip:
+`pip install timm`. Please note that you may need to restart your runtime after installation.
+
+[rosout][CRITICAL] 2025-12-04 22:02:05,519: Échec du chargement du modèle!
+[rospy.core][INFO] 2025-12-04 22:02:05,522: signal_shutdown [Model loading failed]
+[rospy.internal][INFO] 2025-12-04 22:02:05,526: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-12-04 22:02:05,527: topic[/clock] removing connection to http://127.0.0.1:46517/
+[rospy.impl.masterslave][INFO] 2025-12-04 22:02:05,529: Model loading failed
+[rosout][INFO] 2025-12-04 22:02:06,123: Nœud de traitement d'images en cours d'exécution...
+[rospy.core][INFO] 2025-12-04 22:02:06,138: signal_shutdown [atexit]
+[rospy.client][INFO] 2025-12-04 22:07:15,176: init_node, name[/image_processing_node], pid[10625]
+[xmlrpc][INFO] 2025-12-04 22:07:15,177: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-12-04 22:07:15,177: Started XML-RPC server [http://127.0.0.1:38933/]
+[rospy.impl.masterslave][INFO] 2025-12-04 22:07:15,177: _ready: http://127.0.0.1:38933/
+[rospy.init][INFO] 2025-12-04 22:07:15,178: ROS Slave URI: [http://127.0.0.1:38933/]
+[rospy.registration][INFO] 2025-12-04 22:07:15,179: Registering with master node http://localhost:11311/
+[xmlrpc][INFO] 2025-12-04 22:07:15,179: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-12-04 22:07:15,279: registered with master
+[rospy.rosout][INFO] 2025-12-04 22:07:15,279: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-12-04 22:07:15,284: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-12-04 22:07:15,285: initializing /clock core topic
+[rospy.simtime][INFO] 2025-12-04 22:07:15,289: connected to core topic /clock
+[rosout][INFO] 2025-12-04 22:07:15,294: Initialisation du nœud de traitement d'images...
+[rosout][INFO] 2025-12-04 22:07:15,297: Using device: cpu
+[rosout][INFO] 2025-12-04 22:07:15,299: Model cache directory: /home/pal/ros_ws/models
+[rosout][INFO] 2025-12-04 22:07:15,302: Chargement du modèle: facebook/detr-resnet-50
+[rospy.internal][INFO] 2025-12-04 22:07:15,351: topic[/clock] adding connection to [http://127.0.0.1:46517/], count 0
+[rospy.internal][INFO] 2025-12-04 22:07:15,508: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2025-12-04 22:07:17,957: Loading detection model from /home/pal/ros_ws/models/facebook_detr-resnet-50
+[rosout][WARNING] 2025-12-04 22:07:17,959: Model not found locally at /home/pal/ros_ws/models/facebook_detr-resnet-50
+[rosout][INFO] 2025-12-04 22:07:17,963: Attempting to download facebook/detr-resnet-50...
+[rosout][ERROR] 2025-12-04 22:07:18,486: Failed to load detection model: 
+DetrConvEncoder requires the timm library but it was not found in your environment. You can install it with pip:
+`pip install timm`. Please note that you may need to restart your runtime after installation.
+
+[rosout][CRITICAL] 2025-12-04 22:07:18,488: Échec du chargement du modèle!
+[rospy.core][INFO] 2025-12-04 22:07:18,490: signal_shutdown [Model loading failed]
+[rospy.internal][INFO] 2025-12-04 22:07:18,493: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-12-04 22:07:18,494: topic[/clock] removing connection to http://127.0.0.1:46517/
+[rospy.impl.masterslave][INFO] 2025-12-04 22:07:18,495: Model loading failed
+[rosout][INFO] 2025-12-04 22:07:19,092: Nœud de traitement d'images en cours d'exécution...
+[rospy.core][INFO] 2025-12-04 22:07:19,097: signal_shutdown [atexit]
+[rospy.client][INFO] 2025-12-04 22:09:09,759: init_node, name[/image_processing_node], pid[10684]
+[xmlrpc][INFO] 2025-12-04 22:09:09,760: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-12-04 22:09:09,761: Started XML-RPC server [http://127.0.0.1:38421/]
+[rospy.init][INFO] 2025-12-04 22:09:09,761: ROS Slave URI: [http://127.0.0.1:38421/]
+[rospy.impl.masterslave][INFO] 2025-12-04 22:09:09,761: _ready: http://127.0.0.1:38421/
+[rospy.registration][INFO] 2025-12-04 22:09:09,762: Registering with master node http://localhost:11311/
+[xmlrpc][INFO] 2025-12-04 22:09:09,763: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-12-04 22:09:09,862: registered with master
+[rospy.rosout][INFO] 2025-12-04 22:09:09,862: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-12-04 22:09:09,867: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-12-04 22:09:09,869: initializing /clock core topic
+[rospy.simtime][INFO] 2025-12-04 22:09:09,873: connected to core topic /clock
+[rosout][INFO] 2025-12-04 22:09:09,878: Initialisation du nœud de traitement d'images...
+[rosout][INFO] 2025-12-04 22:09:09,882: Using device: cpu
+[rosout][INFO] 2025-12-04 22:09:09,884: Model cache directory: /home/pal/ros_ws/models
+[rosout][INFO] 2025-12-04 22:09:09,888: Chargement du modèle: facebook/detr-resnet-50
+[rospy.internal][INFO] 2025-12-04 22:09:09,936: topic[/clock] adding connection to [http://127.0.0.1:46517/], count 0
+[rospy.internal][INFO] 2025-12-04 22:09:10,086: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2025-12-04 22:09:12,505: Loading detection model from /home/pal/ros_ws/models/facebook_detr-resnet-50
+[rosout][WARNING] 2025-12-04 22:09:12,507: Model not found locally at /home/pal/ros_ws/models/facebook_detr-resnet-50
+[rosout][INFO] 2025-12-04 22:09:12,510: Attempting to download facebook/detr-resnet-50...
+[rosout][ERROR] 2025-12-04 22:09:13,784: Failed to load detection model: 
+DetrConvEncoder requires the timm library but it was not found in your environment. You can install it with pip:
+`pip install timm`. Please note that you may need to restart your runtime after installation.
+
+[rosout][CRITICAL] 2025-12-04 22:09:13,786: Échec du chargement du modèle!
+[rospy.core][INFO] 2025-12-04 22:09:13,789: signal_shutdown [Model loading failed]
+[rospy.internal][INFO] 2025-12-04 22:09:13,792: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-12-04 22:09:13,793: topic[/clock] removing connection to http://127.0.0.1:46517/
+[rospy.impl.masterslave][INFO] 2025-12-04 22:09:13,793: Model loading failed
+[rosout][INFO] 2025-12-04 22:09:14,390: Nœud de traitement d'images en cours d'exécution...
+[rospy.core][INFO] 2025-12-04 22:09:14,394: signal_shutdown [atexit]
+[rospy.client][INFO] 2025-12-04 22:41:48,125: init_node, name[/image_processing_node], pid[10768]
+[xmlrpc][INFO] 2025-12-04 22:41:48,126: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-12-04 22:41:48,126: Started XML-RPC server [http://127.0.0.1:42839/]
+[rospy.init][INFO] 2025-12-04 22:41:48,126: ROS Slave URI: [http://127.0.0.1:42839/]
+[rospy.impl.masterslave][INFO] 2025-12-04 22:41:48,126: _ready: http://127.0.0.1:42839/
+[rospy.registration][INFO] 2025-12-04 22:41:48,127: Registering with master node http://localhost:11311/
+[xmlrpc][INFO] 2025-12-04 22:41:48,127: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-12-04 22:41:48,227: registered with master
+[rospy.rosout][INFO] 2025-12-04 22:41:48,227: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-12-04 22:41:48,233: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-12-04 22:41:48,234: initializing /clock core topic
+[rospy.simtime][INFO] 2025-12-04 22:41:48,236: connected to core topic /clock
+[rosout][INFO] 2025-12-04 22:41:48,241: Initialisation du nœud de traitement d'images...
+[rosout][INFO] 2025-12-04 22:41:48,244: Using device: cpu
+[rosout][INFO] 2025-12-04 22:41:48,245: Model cache directory: /home/pal/ros_ws/models
+[rosout][INFO] 2025-12-04 22:41:48,248: Chargement du modèle: facebook/detr-resnet-50
+[rospy.internal][INFO] 2025-12-04 22:41:48,294: topic[/clock] adding connection to [http://127.0.0.1:46517/], count 0
+[rospy.internal][INFO] 2025-12-04 22:41:48,485: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2025-12-04 22:41:50,596: Loading detection model from /home/pal/ros_ws/models/facebook_detr-resnet-50
+[rosout][WARNING] 2025-12-04 22:41:50,598: Model not found locally at /home/pal/ros_ws/models/facebook_detr-resnet-50
+[rosout][INFO] 2025-12-04 22:41:50,601: Attempting to download facebook/detr-resnet-50...
+[rosout][ERROR] 2025-12-04 22:41:51,130: Failed to load detection model: 
+DetrConvEncoder requires the timm library but it was not found in your environment. You can install it with pip:
+`pip install timm`. Please note that you may need to restart your runtime after installation.
+
+[rosout][CRITICAL] 2025-12-04 22:41:51,132: Échec du chargement du modèle!
+[rospy.core][INFO] 2025-12-04 22:41:51,134: signal_shutdown [Model loading failed]
+[rospy.internal][INFO] 2025-12-04 22:41:51,137: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-12-04 22:41:51,137: topic[/clock] removing connection to http://127.0.0.1:46517/
+[rospy.impl.masterslave][INFO] 2025-12-04 22:41:51,138: Model loading failed
+[rosout][INFO] 2025-12-04 22:41:51,735: Nœud de traitement d'images en cours d'exécution...
+[rospy.core][INFO] 2025-12-04 22:41:51,785: signal_shutdown [atexit]
+[rospy.client][INFO] 2025-12-04 22:44:25,867: init_node, name[/image_processing_node], pid[10830]
+[xmlrpc][INFO] 2025-12-04 22:44:25,868: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-12-04 22:44:25,869: Started XML-RPC server [http://127.0.0.1:33625/]
+[rospy.impl.masterslave][INFO] 2025-12-04 22:44:25,869: _ready: http://127.0.0.1:33625/
+[rospy.init][INFO] 2025-12-04 22:44:25,869: ROS Slave URI: [http://127.0.0.1:33625/]
+[rospy.registration][INFO] 2025-12-04 22:44:25,870: Registering with master node http://localhost:11311/
+[xmlrpc][INFO] 2025-12-04 22:44:25,870: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-12-04 22:44:25,970: registered with master
+[rospy.rosout][INFO] 2025-12-04 22:44:25,970: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-12-04 22:44:25,975: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-12-04 22:44:25,977: initializing /clock core topic
+[rospy.simtime][INFO] 2025-12-04 22:44:25,979: connected to core topic /clock
+[rosout][INFO] 2025-12-04 22:44:25,984: Initialisation du nœud de traitement d'images...
+[rosout][INFO] 2025-12-04 22:44:25,986: Using device: cpu
+[rosout][INFO] 2025-12-04 22:44:25,988: Model cache directory: /home/pal/ros_ws/models
+[rosout][INFO] 2025-12-04 22:44:25,993: Chargement du modèle: facebook/detr-resnet-50
+[rospy.internal][INFO] 2025-12-04 22:44:26,037: topic[/clock] adding connection to [http://127.0.0.1:46517/], count 0
+[rospy.internal][INFO] 2025-12-04 22:44:26,192: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2025-12-04 22:44:28,574: Loading detection model from /home/pal/ros_ws/models/facebook_detr-resnet-50
+[rosout][WARNING] 2025-12-04 22:44:28,577: Model not found locally at /home/pal/ros_ws/models/facebook_detr-resnet-50
+[rosout][INFO] 2025-12-04 22:44:28,579: Attempting to download facebook/detr-resnet-50...
+[timm.models._builder][INFO] 2025-12-04 22:44:30,870: Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+[timm.models._hub][INFO] 2025-12-04 22:45:34,102: [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+[timm.models._builder][INFO] 2025-12-04 22:45:34,234: Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+[rosout][INFO] 2025-12-04 22:45:34,470: Saving model to /home/pal/ros_ws/models/facebook_detr-resnet-50
+[rosout][INFO] 2025-12-04 22:45:35,152: Detection model loaded successfully on cpu
+[rosout][INFO] 2025-12-04 22:45:35,175: Nœud de traitement d'images initialisé avec succès!
+[rosout][INFO] 2025-12-04 22:45:35,178: Seuil de confiance: 0.7
+[rosout][INFO] 2025-12-04 22:45:35,181: Répertoire d'images: /home/pal/ros_ws/data/images
+[rosout][INFO] 2025-12-04 22:45:35,184: Répertoire de résultats: /home/pal/ros_ws/data/results
+[rosout][INFO] 2025-12-04 22:45:35,189: Nœud de traitement d'images en cours d'exécution...
+[rospy.internal][INFO] 2025-12-04 22:45:35,230: topic[/xtion/rgb/image_raw] adding connection to [http://127.0.0.1:46517/], count 0
+[rosout][INFO] 2025-12-04 22:45:38,274: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:45:40,778: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:45:43,106: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:45:45,355: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:45:47,610: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:45:49,866: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:45:52,312: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:45:54,916: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:45:57,415: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:00,253: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:03,011: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:05,423: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:07,838: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:10,552: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:13,232: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:15,932: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:18,442: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:21,044: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:23,732: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:26,320: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:29,277: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:32,072: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:34,911: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:37,724: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:40,032: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:42,594: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:45,296: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:47,834: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:50,353: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:52,801: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:55,220: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:46:57,701: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:00,249: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:02,630: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:05,111: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:07,580: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:09,891: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:12,125: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:14,352: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:16,616: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:18,838: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:21,097: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:23,331: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:25,513: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:27,781: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:30,013: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:32,288: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:34,522: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:36,779: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:39,019: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:41,257: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:43,474: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:45,675: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:47,915: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:50,133: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:52,365: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:54,559: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:56,817: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:47:59,065: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:01,251: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:03,495: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:05,694: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:07,923: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:10,203: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:12,446: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:14,687: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:16,865: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:19,066: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:21,341: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:23,601: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:25,988: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:28,303: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:31,143: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:34,476: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:36,888: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:39,172: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:41,361: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:43,842: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:46,388: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:49,020: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:51,416: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:53,810: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:56,070: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:48:58,265: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:00,468: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:02,712: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:04,938: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:07,148: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:09,434: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:11,613: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:13,853: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:16,129: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:18,341: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:20,597: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:23,021: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:25,549: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:27,881: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:30,188: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:32,577: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:34,961: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:37,583: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:40,035: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:42,180: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:44,424: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:46,823: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:49,001: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:51,186: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:53,328: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:55,422: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:57,574: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:49:59,751: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:02,040: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:04,321: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:06,538: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:08,831: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:11,031: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:13,294: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:15,677: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:18,024: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:20,269: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:22,819: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:25,114: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:27,454: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:29,815: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:32,105: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:34,434: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:36,709: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:39,058: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:41,305: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:43,543: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:45,732: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:48,088: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:50,404: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:52,791: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:55,159: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:50:57,446: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:00,362: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:03,064: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:05,611: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:07,723: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:09,893: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:12,055: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:14,210: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:16,337: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:18,485: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:20,638: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:22,776: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:24,987: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:27,158: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:29,327: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:31,860: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:34,412: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:36,600: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:38,729: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:41,385: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:44,498: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:47,076: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:49,766: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:52,060: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:54,243: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:56,480: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:51:58,779: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:01,112: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:03,502: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:05,756: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:08,256: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:10,847: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:13,192: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:15,577: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:17,765: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:19,962: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:22,222: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:24,818: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:27,130: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:29,432: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:31,743: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:34,169: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:36,613: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:39,044: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:41,495: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:43,705: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:45,910: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:48,275: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:50,670: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:53,144: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:55,777: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:52:58,194: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:00,749: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:03,534: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:06,298: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:08,651: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:11,109: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:13,554: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:15,945: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:18,156: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:20,347: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:23,198: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:25,764: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:28,541: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:30,781: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:34,044: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:36,498: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:38,898: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:41,277: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:43,619: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:45,923: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:48,312: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:50,595: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:52,894: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:55,092: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:57,344: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:53:59,713: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:01,956: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:04,243: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:06,619: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:08,927: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:11,486: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:13,933: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:16,238: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:18,598: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:21,052: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:23,424: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:26,081: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:28,874: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:31,238: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:33,582: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:35,938: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:38,204: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:40,559: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:42,982: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:45,086: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:47,347: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:49,633: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:52,151: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:54,365: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:56,814: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:54:58,959: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:01,400: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:03,641: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:05,851: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:08,125: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:10,407: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:12,548: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:14,891: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:17,013: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:19,123: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:21,278: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:23,409: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:25,735: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:27,983: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:30,115: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:32,209: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:34,338: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:36,436: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:38,650: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:40,752: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:42,869: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:45,058: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:47,812: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:50,367: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:52,884: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:55,144: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:57,407: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:55:59,508: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:01,611: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:03,810: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:05,833: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:07,932: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:09,906: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:12,291: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:14,507: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:16,822: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:19,244: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:21,399: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:23,608: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:25,788: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:27,841: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:29,905: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:32,287: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:34,826: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:37,129: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:39,361: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:41,526: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:43,668: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:45,747: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:47,844: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:49,917: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:52,078: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:54,174: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:56,226: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:56:58,351: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:00,513: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:02,632: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:04,641: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:06,737: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:09,026: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:11,467: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:13,927: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:16,399: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:18,732: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:20,871: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:23,157: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:25,592: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:27,761: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:29,961: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:32,295: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:34,668: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:36,840: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:39,086: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:41,526: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:43,829: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:46,157: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:48,515: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:50,843: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:53,108: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:55,402: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:57:57,659: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:58:00,371: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:58:02,719: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:58:05,173: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:58:07,712: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:58:10,431: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:58:13,125: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:58:15,695: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:58:18,300: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:58:20,896: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:58:23,344: Detected 3 tableware objects
+[rosout][INFO] 2025-12-04 22:58:25,745: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 22:58:28,096: Detected 3 tableware objects
+[rosout][INFO] 2025-12-04 22:58:30,432: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 22:58:32,963: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 22:58:35,270: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 22:58:37,545: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 22:58:39,678: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 22:58:41,887: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:58:44,166: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:58:46,476: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:58:48,724: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 22:58:50,998: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 22:58:53,598: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 22:58:56,193: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 22:58:58,657: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 22:59:00,993: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 22:59:03,230: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 22:59:05,329: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 22:59:07,485: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 22:59:09,670: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 22:59:11,842: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 22:59:14,020: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 22:59:16,133: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 22:59:18,325: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 22:59:20,479: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 22:59:22,709: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 22:59:25,033: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 22:59:27,428: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 22:59:29,982: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 22:59:33,018: Detected 3 tableware objects
+[rosout][INFO] 2025-12-04 22:59:35,663: Detected 3 tableware objects
+[rosout][INFO] 2025-12-04 22:59:37,975: Detected 3 tableware objects
+[rosout][INFO] 2025-12-04 22:59:40,647: Detected 3 tableware objects
+[rosout][INFO] 2025-12-04 22:59:43,025: Detected 3 tableware objects
+[rosout][INFO] 2025-12-04 22:59:45,242: Detected 3 tableware objects
+[rosout][INFO] 2025-12-04 22:59:47,564: Detected 3 tableware objects
+[rosout][INFO] 2025-12-04 22:59:49,950: Detected 3 tableware objects
+[rosout][INFO] 2025-12-04 22:59:52,451: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 22:59:54,895: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 22:59:57,354: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 22:59:59,796: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 23:00:02,163: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 23:00:04,543: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 23:00:06,858: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 23:00:09,268: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 23:00:11,503: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 23:00:13,736: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:00:16,109: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:00:18,603: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:00:21,093: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:00:23,661: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:00:26,176: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:00:28,643: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:00:30,935: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 23:00:33,282: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 23:00:35,684: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 23:00:37,963: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:00:40,198: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 23:00:42,524: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 23:00:44,803: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:00:47,034: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:00:49,393: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:00:52,132: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:00:54,840: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:00:57,145: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:00:59,349: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:01,463: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:03,766: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:05,968: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:08,173: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:10,718: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:13,545: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:15,810: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:18,019: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:20,460: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:22,769: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:24,988: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:27,184: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:29,470: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:31,721: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:33,892: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:36,095: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:38,257: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:40,447: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:42,772: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:45,172: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:47,604: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:50,148: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:52,930: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:55,470: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:01:57,944: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:00,371: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:02,581: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:04,818: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:07,109: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:09,381: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:11,629: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:13,989: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:16,446: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:19,119: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:21,486: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:23,776: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:26,134: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:28,423: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:30,590: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:32,898: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:35,165: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:37,477: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:39,749: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:42,022: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:44,294: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:46,528: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:48,811: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:51,028: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:53,336: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:55,670: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:02:58,014: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:00,275: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:02,553: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:04,787: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:07,102: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:09,588: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:11,964: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:14,295: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:16,615: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:18,980: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:21,215: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:23,604: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:26,050: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:28,404: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:30,751: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:32,996: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:35,485: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:37,862: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:40,164: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:42,470: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:44,826: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:47,284: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:49,774: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:52,192: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:54,724: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:57,159: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:03:59,737: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:02,399: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:05,274: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:07,745: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:10,112: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:12,360: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:14,592: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:16,818: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:19,112: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:21,438: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:23,688: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:26,027: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:28,414: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:30,717: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:33,027: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:35,389: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:37,766: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:40,279: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:42,662: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:44,906: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:47,064: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:49,386: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:51,705: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:54,047: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:56,432: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:04:58,877: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:01,760: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:03,961: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:06,006: Traitement des images capturées...
+[rosout][INFO] 2025-12-04 23:05:06,017: Trouvé 17 images à traiter
+[rosout][INFO] 2025-12-04 23:05:06,021: Traitement de table_position_1_20251024_021559.png...
+[rosout][INFO] 2025-12-04 23:05:06,471: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:09,981: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:10,063: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 23:05:10,066: Organized: 2 cutlery, 0 plates, 0 cups
+[rosout][INFO] 2025-12-04 23:05:10,086:   Détecté: 2 objets
+[rosout][INFO] 2025-12-04 23:05:10,091: Traitement de table_position_1_20251204_201733.png...
+[rosout][INFO] 2025-12-04 23:05:13,581: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:14,192: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:05:14,200: Organized: 0 cutlery, 0 plates, 0 cups
+[rosout][INFO] 2025-12-04 23:05:14,210:   Détecté: 0 objets
+[rosout][INFO] 2025-12-04 23:05:14,224: Traitement de table_position_1_20251204_215041.png...
+[rosout][INFO] 2025-12-04 23:05:17,378: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:18,387: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:05:18,396: Organized: 0 cutlery, 0 plates, 0 cups
+[rosout][INFO] 2025-12-04 23:05:18,412:   Détecté: 0 objets
+[rosout][INFO] 2025-12-04 23:05:18,417: Traitement de table_position_1_20251204_225757.png...
+[rosout][INFO] 2025-12-04 23:05:21,050: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:22,617: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:22,621: Organized: 1 cutlery, 0 plates, 0 cups
+[rosout][INFO] 2025-12-04 23:05:22,647:   Détecté: 1 objets
+[rosout][INFO] 2025-12-04 23:05:22,653: Traitement de table_position_2_20251024_021619.png...
+[rosout][INFO] 2025-12-04 23:05:24,744: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:26,864: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:26,868: Organized: 1 cutlery, 0 plates, 0 cups
+[rosout][INFO] 2025-12-04 23:05:26,890:   Détecté: 1 objets
+[rosout][INFO] 2025-12-04 23:05:26,894: Traitement de table_position_2_20251204_201739.png...
+[rosout][INFO] 2025-12-04 23:05:28,507: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:31,630: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:05:31,636: Organized: 0 cutlery, 0 plates, 0 cups
+[rosout][INFO] 2025-12-04 23:05:31,651:   Détecté: 0 objets
+[rosout][INFO] 2025-12-04 23:05:31,658: Traitement de table_position_2_20251204_215048.png...
+[rosout][INFO] 2025-12-04 23:05:32,669: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:35,895: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:05:35,899: Organized: 0 cutlery, 0 plates, 0 cups
+[rosout][INFO] 2025-12-04 23:05:35,908:   Détecté: 0 objets
+[rosout][INFO] 2025-12-04 23:05:35,912: Traitement de table_position_2_20251204_225807.png...
+[rosout][INFO] 2025-12-04 23:05:36,314: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:39,937: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:39,962: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 23:05:39,966: Organized: 2 cutlery, 0 plates, 0 cups
+[rosout][INFO] 2025-12-04 23:05:39,983:   Détecté: 2 objets
+[rosout][INFO] 2025-12-04 23:05:39,986: Traitement de table_position_3_20251024_021643.png...
+[rosout][INFO] 2025-12-04 23:05:43,655: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:43,919: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:43,923: Organized: 1 cutlery, 0 plates, 0 cups
+[rosout][INFO] 2025-12-04 23:05:43,944:   Détecté: 1 objets
+[rosout][INFO] 2025-12-04 23:05:43,948: Traitement de table_position_3_20251204_201746.png...
+[rosout][INFO] 2025-12-04 23:05:47,491: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:48,073: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:05:48,079: Organized: 0 cutlery, 0 plates, 0 cups
+[rosout][INFO] 2025-12-04 23:05:48,094:   Détecté: 0 objets
+[rosout][INFO] 2025-12-04 23:05:48,098: Traitement de table_position_3_20251204_215054.png...
+[rosout][INFO] 2025-12-04 23:05:51,111: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:52,104: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:05:52,111: Organized: 0 cutlery, 0 plates, 0 cups
+[rosout][INFO] 2025-12-04 23:05:52,133:   Détecté: 0 objets
+[rosout][INFO] 2025-12-04 23:05:52,138: Traitement de table_position_3_20251204_225817.png...
+[rosout][INFO] 2025-12-04 23:05:54,962: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:05:56,260: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:05:56,266: Organized: 0 cutlery, 0 plates, 0 cups
+[rosout][INFO] 2025-12-04 23:05:56,290:   Détecté: 0 objets
+[rosout][INFO] 2025-12-04 23:05:56,297: Traitement de table_position_4_20251024_021704.png...
+[rosout][INFO] 2025-12-04 23:05:58,668: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:00,319: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 23:06:00,324: Organized: 2 cutlery, 0 plates, 0 cups
+[rosout][INFO] 2025-12-04 23:06:00,346:   Détecté: 2 objets
+[rosout][INFO] 2025-12-04 23:06:00,349: Traitement de table_position_4_20251204_201752.png...
+[rosout][INFO] 2025-12-04 23:06:02,324: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:04,431: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:06:04,437: Organized: 0 cutlery, 0 plates, 0 cups
+[rosout][INFO] 2025-12-04 23:06:04,454:   Détecté: 0 objets
+[rosout][INFO] 2025-12-04 23:06:04,457: Traitement de table_position_4_20251204_215101.png...
+[rosout][INFO] 2025-12-04 23:06:05,970: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:08,459: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:06:08,462: Organized: 0 cutlery, 0 plates, 0 cups
+[rosout][INFO] 2025-12-04 23:06:08,476:   Détecté: 0 objets
+[rosout][INFO] 2025-12-04 23:06:08,481: Traitement de table_position_4_20251204_225826.png...
+[rosout][INFO] 2025-12-04 23:06:09,636: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:12,790: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:12,798: Organized: 1 cutlery, 0 plates, 0 cups
+[rosout][INFO] 2025-12-04 23:06:12,821:   Détecté: 1 objets
+[rosout][INFO] 2025-12-04 23:06:12,825: Traitement de tiago_capture_20251017_155345.png...
+[rosout][INFO] 2025-12-04 23:06:13,413: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:16,704: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:06:16,710: Organized: 0 cutlery, 0 plates, 0 cups
+[rosout][INFO] 2025-12-04 23:06:16,719:   Détecté: 0 objets
+[rosout][INFO] 2025-12-04 23:06:16,724: Traitement terminé: 17 images traitées. Résultats sauvegardés dans /home/pal/ros_ws/data/results/detection_results_20251204_230616.json
+[rosout][INFO] 2025-12-04 23:06:16,815: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:19,115: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:21,225: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:23,386: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:25,609: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:27,738: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:29,877: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:32,032: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:34,184: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:36,349: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:38,482: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:40,654: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:42,838: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:44,946: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:47,097: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:49,134: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:51,434: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:53,682: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:55,857: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:06:57,973: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:00,117: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:02,566: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:04,958: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:07,395: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:09,659: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:11,976: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:14,153: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:16,265: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:18,434: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:20,617: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:23,230: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:26,203: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:29,033: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:32,036: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:34,512: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:36,863: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:39,788: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:42,283: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:44,745: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:47,134: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:49,499: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:51,741: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:54,000: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:07:56,201: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 23:07:58,567: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:00,833: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:03,238: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:05,717: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:08,428: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:10,821: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:13,214: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:15,426: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:17,569: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:19,939: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:22,169: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:24,560: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:26,946: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:29,339: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 23:08:31,599: Detected 2 tableware objects
+[rosout][INFO] 2025-12-04 23:08:33,984: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:36,462: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:38,845: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:41,433: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:43,994: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:46,438: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:48,962: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:51,396: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:53,907: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:56,341: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:08:58,824: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:01,241: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:03,691: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:06,094: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:08,525: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:10,971: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:13,361: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:15,782: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:18,188: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:20,623: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:23,028: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:25,567: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:28,022: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:30,454: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:32,873: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:35,688: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:38,462: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:41,284: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:43,970: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:46,206: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:48,470: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:50,777: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:53,189: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:55,497: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:57,738: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:09:59,928: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:02,144: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:04,520: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:06,800: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:09,008: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:11,344: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:13,703: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:15,931: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:18,180: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:20,520: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:23,264: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:25,564: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:27,797: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:29,938: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:32,132: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:34,429: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:36,649: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:38,856: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:41,007: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:43,207: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:45,425: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:47,650: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:50,072: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:52,292: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:54,606: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:56,746: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:10:59,249: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:01,814: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:04,092: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:06,410: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:08,669: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:10,946: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:13,247: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:15,414: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:17,521: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:19,604: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:21,745: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:23,843: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:26,013: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:28,205: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:30,608: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:32,932: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:35,464: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:37,787: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:39,988: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:42,199: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:44,503: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:46,711: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:48,954: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:51,207: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:53,583: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:55,766: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:11:58,128: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:00,370: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:02,635: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:04,842: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:07,410: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:09,853: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:12,165: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:14,410: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:16,695: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:18,937: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:21,268: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:23,614: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:25,943: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:28,261: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:30,582: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:32,747: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:35,126: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:37,277: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:39,498: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:41,759: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:43,918: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:46,051: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:48,176: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:50,312: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:52,454: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:54,568: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:56,735: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:12:59,031: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:01,189: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:03,341: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:05,636: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:08,181: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:10,378: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:12,791: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:15,052: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:17,280: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:19,769: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:22,059: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:24,192: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:26,411: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:28,682: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:30,841: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:33,097: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:35,406: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:37,683: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:39,897: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:42,052: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:44,176: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:46,348: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:48,808: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:51,264: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:53,625: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:55,983: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:13:58,096: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:00,333: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:02,941: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:05,306: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:07,438: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:09,568: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:11,716: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:13,900: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:16,065: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:18,237: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:20,373: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:22,487: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:24,602: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:26,796: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:28,933: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:31,087: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:33,171: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:35,430: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:37,574: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:39,715: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:41,879: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:44,042: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:46,152: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:48,238: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:50,315: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:52,437: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:54,555: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:56,684: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:14:58,803: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:00,881: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:02,982: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:05,155: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:07,267: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:09,462: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:11,548: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:13,683: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:15,748: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:17,862: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:19,980: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:22,100: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:24,171: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:26,250: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:28,362: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:30,440: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:32,556: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:34,738: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:15:36,866: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:15:38,983: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:41,124: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:15:43,249: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:45,332: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:47,455: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:15:49,584: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:15:51,789: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:53,887: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:56,141: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:15:58,474: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:16:00,815: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:16:03,172: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:16:05,357: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:16:07,613: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:16:09,961: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:16:12,041: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:16:14,214: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:16:16,399: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:16:18,599: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:16:20,772: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:16:22,993: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:16:25,237: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:16:27,482: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:16:29,690: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:16:31,882: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:16:34,059: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:16:36,385: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:16:38,688: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:16:40,990: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:16:43,082: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:16:45,176: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:16:47,324: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:16:49,453: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:16:51,617: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:16:53,771: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:16:55,874: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:16:58,087: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:00,210: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:02,346: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:04,471: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:06,610: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:08,690: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:10,800: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:12,946: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:15,188: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:17,745: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:20,149: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:22,476: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:24,636: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:27,258: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:29,622: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:31,939: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:34,322: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:36,711: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:39,196: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:41,731: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:44,554: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:46,789: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:49,159: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:51,397: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:53,695: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:55,930: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:17:58,640: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:18:01,028: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:18:03,658: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:18:05,973: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:18:08,389: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:18:10,606: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:18:13,007: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:18:15,602: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:18:18,975: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:18:22,063: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:18:25,053: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:18:28,090: Detected 0 tableware objects
+[rosout][INFO] 2025-12-04 23:18:30,762: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:18:33,609: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:18:36,607: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:18:39,038: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:18:41,636: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:18:44,224: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:18:46,564: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:18:48,947: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:18:51,288: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:18:53,848: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:18:56,327: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:18:58,853: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:01,198: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:03,865: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:06,774: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:09,665: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:12,505: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:15,525: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:18,086: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:20,386: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:22,741: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:25,422: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:28,122: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:30,626: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:33,108: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:36,044: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:39,261: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:42,415: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:45,221: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:48,204: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:51,079: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:53,971: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:56,562: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:19:58,904: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:01,121: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:03,427: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:05,911: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:08,511: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:11,014: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:13,402: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:15,908: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:18,321: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:21,001: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:23,578: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:26,212: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:28,522: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:30,643: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:32,988: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:35,217: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:37,600: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:39,953: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:42,489: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:44,828: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:47,239: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:49,650: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:52,092: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:54,441: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:56,682: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:20:58,999: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:01,354: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:03,641: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:05,770: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:08,087: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:10,444: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:13,204: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:15,661: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:18,109: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:20,405: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:22,828: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:25,356: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:27,698: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:30,006: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:32,262: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:34,725: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:36,928: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:39,185: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:41,331: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:43,785: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:46,115: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:48,316: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:50,561: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:52,799: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:55,031: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:57,279: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:21:59,539: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:01,694: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:03,918: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:06,156: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:08,754: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:11,116: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:13,333: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:15,577: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:17,731: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:19,830: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:21,982: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:24,121: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:26,377: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:28,585: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:30,758: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:32,909: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:35,111: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:37,294: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:39,405: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:41,559: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:43,765: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:46,397: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:48,716: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:50,835: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:52,998: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:55,191: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:57,394: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:22:59,540: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:01,698: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:03,854: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:06,045: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:08,241: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:10,458: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:12,593: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:14,898: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:17,154: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:19,361: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:21,505: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:23,653: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:25,794: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:27,957: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:30,066: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:32,208: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:34,370: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:36,544: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:38,646: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:40,840: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:42,978: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:45,122: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:47,274: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:49,489: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:51,803: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:54,187: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:56,346: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:23:58,636: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:00,818: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:03,025: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:05,209: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:07,398: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:09,550: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:11,704: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:13,844: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:16,016: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:18,141: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:20,329: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:22,469: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:24,627: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:26,834: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:29,008: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:31,179: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:33,312: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:35,575: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:38,060: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:40,631: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:43,016: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:45,257: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:47,881: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:50,262: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:52,740: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:55,025: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:57,323: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:24:59,854: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:02,178: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:04,512: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:06,831: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:09,210: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:11,580: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:13,993: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:16,256: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:18,802: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:21,206: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:23,634: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:25,891: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:28,164: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:30,528: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:32,809: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:35,419: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:37,915: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:40,389: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:42,789: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:45,385: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:47,780: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:50,271: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:52,689: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:55,190: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:25:57,609: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:00,145: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:02,593: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:05,127: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:07,558: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:10,009: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:12,602: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:15,071: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:17,533: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:19,955: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:22,532: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:24,990: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:27,562: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:29,920: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:32,391: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:34,849: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:37,314: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:39,796: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:42,592: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:45,197: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:47,854: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:50,363: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:52,828: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:55,215: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:26:57,716: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:00,198: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:02,490: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:04,952: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:07,281: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:09,768: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:12,091: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:15,096: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:17,448: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:20,107: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:22,574: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:24,865: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:27,008: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:29,137: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:31,241: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:33,324: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:35,507: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:37,638: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:39,721: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:41,834: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:43,900: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:45,992: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:48,115: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:50,187: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:52,321: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:54,416: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:56,499: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:27:58,660: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:00,860: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:03,148: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:05,477: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:07,869: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:10,133: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:12,211: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:14,480: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:16,778: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:18,988: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:21,149: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:23,335: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:25,722: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:28,074: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:30,480: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:32,979: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:35,479: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:37,823: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:40,102: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:42,309: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:44,511: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:46,726: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:48,948: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:51,209: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:53,518: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:55,790: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:28:58,188: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:00,411: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:02,743: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:04,896: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:06,971: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:09,224: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:11,309: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:13,411: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:15,512: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:17,585: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:19,709: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:21,816: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:24,008: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:26,163: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:28,660: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:31,029: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:33,167: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:35,753: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:38,176: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:40,643: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:43,096: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:45,479: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:47,865: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:50,289: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:52,675: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:54,933: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:57,068: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:29:59,271: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:01,476: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:03,634: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:05,753: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:07,935: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:10,083: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:12,255: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:14,417: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:16,637: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:18,859: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:20,953: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:23,039: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:25,141: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:27,234: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:29,283: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:31,385: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:33,516: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:35,793: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:37,976: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:40,159: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:42,280: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:44,407: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:46,559: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:48,779: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:50,947: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:53,102: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:55,277: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:57,489: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:30:59,771: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:31:02,334: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:31:04,730: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:31:07,334: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:31:09,605: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:31:11,907: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:31:14,069: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:31:16,236: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:31:18,389: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:31:20,419: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:31:22,548: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:31:24,645: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:31:26,967: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:31:29,085: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:31:31,460: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:31:33,803: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:31:36,654: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:31:39,600: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:31:42,066: Detected 1 tableware objects
+[rosout][INFO] 2025-12-04 23:31:44,932: Detected 1 tableware objects

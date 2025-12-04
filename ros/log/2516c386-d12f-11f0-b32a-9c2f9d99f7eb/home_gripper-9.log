@@ -1,0 +1,31 @@
+[rospy.client][INFO] 2025-12-04 20:19:25,803: init_node, name[/home_gripper], pid[4139]
+[xmlrpc][INFO] 2025-12-04 20:19:25,804: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-12-04 20:19:25,808: Started XML-RPC server [http://127.0.0.1:34403/]
+[rospy.impl.masterslave][INFO] 2025-12-04 20:19:25,808: _ready: http://127.0.0.1:34403/
+[rospy.init][INFO] 2025-12-04 20:19:25,808: ROS Slave URI: [http://127.0.0.1:34403/]
+[rospy.registration][INFO] 2025-12-04 20:19:25,811: Registering with master node http://localhost:11311/
+[xmlrpc][INFO] 2025-12-04 20:19:25,813: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-12-04 20:19:25,912: registered with master
+[rospy.rosout][INFO] 2025-12-04 20:19:25,913: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-12-04 20:19:25,923: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-12-04 20:19:25,930: initializing /clock core topic
+[rospy.simtime][INFO] 2025-12-04 20:19:25,937: connected to core topic /clock
+[rosout][INFO] 2025-12-04 20:19:25,943: Waiting for gripper_controller...
+[rospy.internal][INFO] 2025-12-04 20:19:26,278: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2025-12-04 20:19:26,280: topic[/clock] adding connection to [http://127.0.0.1:39931/], count 0
+[rospy.internal][INFO] 2025-12-04 20:19:26,335: topic[/gripper_controller/follow_joint_trajectory/feedback] adding connection to [http://127.0.0.1:39931/], count 0
+[rospy.internal][INFO] 2025-12-04 20:19:26,420: topic[/gripper_controller/follow_joint_trajectory/result] adding connection to [http://127.0.0.1:39931/], count 0
+[rospy.internal][INFO] 2025-12-04 20:19:26,421: topic[/gripper_controller/follow_joint_trajectory/goal] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2025-12-04 20:19:26,436: topic[/gripper_controller/follow_joint_trajectory/status] adding connection to [http://127.0.0.1:39931/], count 0
+[rospy.internal][INFO] 2025-12-04 20:19:26,540: topic[/gripper_controller/follow_joint_trajectory/cancel] adding connection to [/gazebo], count 0
+[rosout][INFO] 2025-12-04 20:19:26,541: ...connected.
+[rospy.core][INFO] 2025-12-04 20:19:27,005: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2025-12-04 20:19:27,046: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-12-04 20:19:27,049: topic[/gripper_controller/follow_joint_trajectory/goal] removing connection to /gazebo
+[rospy.internal][INFO] 2025-12-04 20:19:27,049: topic[/gripper_controller/follow_joint_trajectory/cancel] removing connection to /gazebo
+[rospy.internal][INFO] 2025-12-04 20:19:27,052: topic[/clock] removing connection to http://127.0.0.1:39931/
+[rospy.internal][INFO] 2025-12-04 20:19:27,055: topic[/gripper_controller/follow_joint_trajectory/status] removing connection to http://127.0.0.1:39931/
+[rospy.internal][INFO] 2025-12-04 20:19:27,056: topic[/gripper_controller/follow_joint_trajectory/result] removing connection to http://127.0.0.1:39931/
+[rospy.internal][INFO] 2025-12-04 20:19:27,056: topic[/gripper_controller/follow_joint_trajectory/feedback] removing connection to http://127.0.0.1:39931/
+[rospy.impl.masterslave][INFO] 2025-12-04 20:19:27,057: signal-2
+[rospy.core][INFO] 2025-12-04 20:19:27,790: signal_shutdown [atexit]

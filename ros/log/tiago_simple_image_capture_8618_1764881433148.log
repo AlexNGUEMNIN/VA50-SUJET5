@@ -1,0 +1,39 @@
+[rospy.client][INFO] 2025-12-04 21:50:33,214: init_node, name[/tiago_simple_image_capture_8618_1764881433148], pid[8618]
+[xmlrpc][INFO] 2025-12-04 21:50:33,214: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-12-04 21:50:33,214: Started XML-RPC server [http://127.0.0.1:46825/]
+[rospy.impl.masterslave][INFO] 2025-12-04 21:50:33,215: _ready: http://127.0.0.1:46825/
+[rospy.init][INFO] 2025-12-04 21:50:33,215: ROS Slave URI: [http://127.0.0.1:46825/]
+[rospy.registration][INFO] 2025-12-04 21:50:33,215: Registering with master node http://localhost:11311/
+[xmlrpc][INFO] 2025-12-04 21:50:33,215: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-12-04 21:50:33,316: registered with master
+[rospy.rosout][INFO] 2025-12-04 21:50:33,316: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-12-04 21:50:33,320: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-12-04 21:50:33,320: initializing /clock core topic
+[rospy.simtime][INFO] 2025-12-04 21:50:33,322: connected to core topic /clock
+[rospy.internal][INFO] 2025-12-04 21:50:33,411: topic[/clock] adding connection to [http://127.0.0.1:39377/], count 0
+[rospy.internal][INFO] 2025-12-04 21:50:33,411: topic[/xtion/rgb/image_raw] adding connection to [http://127.0.0.1:39377/], count 0
+[rospy.internal][INFO] 2025-12-04 21:50:33,546: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2025-12-04 21:50:36,571: Début de la capture panoramique
+[rosout][INFO] 2025-12-04 21:50:36,573: Position 1/4
+[rosout][INFO] 2025-12-04 21:50:36,575: Torse déplacé: height=0.15
+[rosout][INFO] 2025-12-04 21:50:38,652: Tête déplacée: pan=0.0, tilt=-0.7
+[rosout][INFO] 2025-12-04 21:50:41,851: Image sauvegardée: /home/pal/ros_ws/data/images/table_position_1_20251204_215041.png
+[rosout][INFO] 2025-12-04 21:50:42,959: Position 2/4
+[rosout][INFO] 2025-12-04 21:50:42,961: Torse déplacé: height=0.15
+[rosout][INFO] 2025-12-04 21:50:45,068: Tête déplacée: pan=0.4, tilt=-0.6
+[rosout][INFO] 2025-12-04 21:50:48,365: Image sauvegardée: /home/pal/ros_ws/data/images/table_position_2_20251204_215048.png
+[rosout][INFO] 2025-12-04 21:50:49,442: Position 3/4
+[rosout][INFO] 2025-12-04 21:50:49,444: Torse déplacé: height=0.15
+[rosout][INFO] 2025-12-04 21:50:51,593: Tête déplacée: pan=-0.4, tilt=-0.6
+[rosout][INFO] 2025-12-04 21:50:54,811: Image sauvegardée: /home/pal/ros_ws/data/images/table_position_3_20251204_215054.png
+[rosout][INFO] 2025-12-04 21:50:55,846: Position 4/4
+[rosout][INFO] 2025-12-04 21:50:55,848: Torse déplacé: height=0.2
+[rosout][INFO] 2025-12-04 21:50:57,975: Tête déplacée: pan=0.0, tilt=-0.4
+[rosout][INFO] 2025-12-04 21:51:01,147: Image sauvegardée: /home/pal/ros_ws/data/images/table_position_4_20251204_215101.png
+[rosout][INFO] 2025-12-04 21:51:02,172: Capture terminée
+[rospy.core][INFO] 2025-12-04 21:51:02,174: signal_shutdown [atexit]
+[rospy.internal][INFO] 2025-12-04 21:51:02,177: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-12-04 21:51:02,178: topic[/clock] removing connection to http://127.0.0.1:39377/
+[rospy.internal][INFO] 2025-12-04 21:51:02,179: topic[/xtion/rgb/image_raw] removing connection to http://127.0.0.1:39377/
+[rospy.internal][INFO] 2025-12-04 21:51:02,179: topic[/xtion/rgb/image_raw] removing connection to http://127.0.0.1:39377/
+[rospy.impl.masterslave][INFO] 2025-12-04 21:51:02,179: atexit

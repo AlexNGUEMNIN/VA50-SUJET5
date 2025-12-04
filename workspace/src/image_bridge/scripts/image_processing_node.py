@@ -6,6 +6,7 @@ Processes images captured by Tiago robot and detects tableware objects.
 
 import rospy
 import os
+import sys
 import cv2
 import json
 from pathlib import Path
@@ -14,6 +15,12 @@ from sensor_msgs.msg import Image
 from geometry_msgs.msg import PoseArray, Pose, Point, Quaternion
 from std_msgs.msg import Header, String
 from cv_bridge import CvBridge
+
+# Add the src directory to Python path
+script_dir = Path(__file__).resolve().parent
+src_dir = script_dir.parent / "src"
+if str(src_dir) not in sys.path:
+    sys.path.insert(0, str(src_dir))
 
 # Import local model handler
 from image_bridge.local_model_handler import LocalModelHandler

@@ -1,0 +1,27 @@
+[rosmaster.main][INFO] 2025-12-04 20:26:52,927: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2025-12-04 20:26:52,928: Starting ROS Master Node
+[xmlrpc][INFO] 2025-12-04 20:26:52,929: XML-RPC server binding to 127.0.0.1:11311
+[xmlrpc][INFO] 2025-12-04 20:26:52,930: Started XML-RPC server [http://127.0.0.1:11311/]
+[xmlrpc][INFO] 2025-12-04 20:26:52,930: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2025-12-04 20:26:52,930: Master initialized: port[11311], uri[http://127.0.0.1:11311/]
+[rosmaster.master][INFO] 2025-12-04 20:26:52,972: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2025-12-04 20:26:52,973: +PARAM [/roslaunch/uris/host_127_0_0_1__38967] by /roslaunch
+[rosmaster.master][INFO] 2025-12-04 20:26:53,051: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2025-12-04 20:26:53,051: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2025-12-04 20:26:53,051: +PARAM [/image_processing_node/detection_model] by /roslaunch
+[rosmaster.master][INFO] 2025-12-04 20:26:53,051: +PARAM [/image_processing_node/confidence_threshold] by /roslaunch
+[rosmaster.master][INFO] 2025-12-04 20:26:53,051: +PARAM [/image_processing_node/images_dir] by /roslaunch
+[rosmaster.master][INFO] 2025-12-04 20:26:53,051: +PARAM [/image_processing_node/results_dir] by /roslaunch
+[rosmaster.master][INFO] 2025-12-04 20:26:53,051: +PARAM [/image_processing_node/camera_topic] by /roslaunch
+[rosmaster.master][INFO] 2025-12-04 20:26:53,051: +PARAM [/image_processing_node/camera_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2025-12-04 20:26:53,067: +SERVICE [/rosout/get_loggers] /rosout http://127.0.0.1:34695/
+[rosmaster.master][INFO] 2025-12-04 20:26:53,068: +SERVICE [/rosout/set_logger_level] /rosout http://127.0.0.1:34695/
+[rosmaster.master][INFO] 2025-12-04 20:26:53,070: +PUB [/rosout_agg] /rosout http://127.0.0.1:34695/
+[rosmaster.master][INFO] 2025-12-04 20:26:53,072: +SUB [/rosout] /rosout http://127.0.0.1:34695/
+[rosmaster.master][INFO] 2025-12-04 20:37:52,162: -PUB [/rosout_agg] /rosout http://127.0.0.1:34695/
+[rosmaster.master][INFO] 2025-12-04 20:37:52,163: -SUB [/rosout] /rosout http://127.0.0.1:34695/
+[rosmaster.master][INFO] 2025-12-04 20:37:52,164: -SERVICE [/rosout/get_loggers] /rosout rosrpc://127.0.0.1:42785
+[rosmaster.master][INFO] 2025-12-04 20:37:52,164: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://127.0.0.1:42785
+[rosmaster.main][INFO] 2025-12-04 20:37:52,201: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2025-12-04 20:37:52,201: stopping master...
+[rospy.core][INFO] 2025-12-04 20:37:52,201: signal_shutdown [atexit]
