@@ -1,0 +1,10 @@
+# Service for processing an image through the Hugging Face pipeline
+# Request
+string image_path                    # Chemin de l'image à envoyer (ex: ~/ros_ws/data/images/table_position_1.png)
+---
+# Response
+bool success                         # True si le traitement a réussi
+string message                       # Message de statut ou d'erreur
+string generated_image_path          # Chemin de l'image générée par l'IA
+string detections_json_path          # Chemin du JSON des détections initiales
+string final_positions_json_path     # Chemin du JSON des positions finales

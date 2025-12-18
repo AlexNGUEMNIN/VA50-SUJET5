@@ -1,1 +1,36 @@
 docker/
+
+# ROS generated files
+workspace/build/
+workspace/devel/
+workspace/.catkin_workspace
+workspace/install/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Pipeline outputs
+workspace/pipeline/outputs/
+workspace/pipeline/data/images/*.png
+!workspace/pipeline/data/images/.gitkeep
+
+# Hugging Face cache
+.cache/
+models/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+.ros/

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Arguments -->
+  <arg name="config_file" default="$(find huggingface_bridge)/config/huggingface_config.yaml" />
+  
+  <!-- Nœud Hugging Face Bridge -->
+  <node name="huggingface_bridge_node" 
+        pkg="huggingface_bridge" 
+        type="huggingface_bridge_node.py" 
+        output="screen"
+        respawn="false">
+    
+    <!-- Paramètres -->
+    <param name="config_file" value="$(arg config_file)" />
+    
+    <!-- Remapping optionnel des topics -->
+    <!-- <remap from="/tiago/hf_status" to="/custom/status" /> -->
+    
+  </node>
+  
+  <!-- Afficher un message -->
+  <node name="huggingface_bridge_info" pkg="rostopic" type="rostopic" 
+        args="echo /tiago/hf_status" output="screen" launch-prefix="bash -c 'sleep 2; $0 $@' " />
+  
+</launch>

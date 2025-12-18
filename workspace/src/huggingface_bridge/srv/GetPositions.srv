@@ -1,0 +1,7 @@
+# Service for retrieving object positions (initial or final)
+# Request
+string json_type                     # "initial" ou "final"
+---
+# Response
+bool success                         # True si la lecture a réussi
+string json_content                  # Contenu du JSON en string
