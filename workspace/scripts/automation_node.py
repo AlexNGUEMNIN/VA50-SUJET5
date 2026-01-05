@@ -33,8 +33,41 @@ from datetime import datetime
 # CONFIGURATION
 # ==============================================================================
 
-# Chemins des scripts (relatifs au workspace ROS)
-WORKSPACE_PATH = os.path.expanduser("~/ros_ws/workspace")
+def get_workspace_path():
+    """
+    Détermine le chemin du workspace de manière robuste.
+    Priorité: paramètre ROS > variable d'environnement > chemin par défaut
+    """
+    # 1. Essayer le paramètre ROS si disponible
+    try:
+        import rospy
+        if rospy.has_param('~workspace_path'):
+            return rospy.get_param('~workspace_path')
+    except Exception:
+        pass
+    
+    # 2. Essayer la variable d'environnement ROS_WORKSPACE
+    ros_workspace = os.environ.get('ROS_WORKSPACE')
+    if ros_workspace and os.path.exists(ros_workspace):
+        return ros_workspace
+    
+    # 3. Essayer de déduire depuis le chemin du script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    if 'scripts' in script_dir:
+        workspace_candidate = os.path.dirname(script_dir)
+        if os.path.exists(os.path.join(workspace_candidate, 'pipeline')):
+            return workspace_candidate
+    
+    # 4. Chemin par défaut
+    default_path = os.path.expanduser("~/ros_ws/workspace")
+    if os.path.exists(default_path):
+        return default_path
+    
+    # 5. Fallback: répertoire parent du script
+    return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Chemins des scripts (déterminés dynamiquement)
+WORKSPACE_PATH = get_workspace_path()
 SCRIPTS_PATH = os.path.join(WORKSPACE_PATH, "scripts")
 PIPELINE_PATH = os.path.join(WORKSPACE_PATH, "pipeline")
 
@@ -453,16 +486,28 @@ Exemples d'utilisation:
         # Créer le nœud d'automatisation
         node = TiagoAutomationNode()
         
-        # Attendre que Gazebo soit prêt (sauf si --no-wait)
-        if not args.no_wait and args.mode in ['full', 'capture']:
+        # Lire les paramètres ROS si disponibles (permet d'utiliser via roslaunch)
+        ros_mode = rospy.get_param('~mode', args.mode)
+        ros_wait_for_gazebo = rospy.get_param('~wait_for_gazebo', not args.no_wait)
+        
+        # Les arguments CLI ont priorité sur les paramètres ROS
+        mode = args.mode if args.mode != 'full' else ros_mode
+        wait_for_gazebo = not args.no_wait and ros_wait_for_gazebo
+        
+        rospy.loginfo(f"📌 Mode d'exécution: {mode}")
+        rospy.loginfo(f"📌 Attente Gazebo: {wait_for_gazebo}")
+        rospy.loginfo(f"📌 Workspace: {WORKSPACE_PATH}")
+        
+        # Attendre que Gazebo soit prêt (sauf si désactivé)
+        if wait_for_gazebo and mode in ['full', 'capture']:
             if not node.wait_for_gazebo(timeout=60):
                 rospy.logwarn("⚠️  Gazebo peut ne pas être prêt, tentative de continuer...")
         
         # Exécuter selon le mode choisi
-        if args.mode == 'full':
+        if mode == 'full':
             success = node.run_full_pipeline()
         else:
-            success = node.run_single_step(args.mode)
+            success = node.run_single_step(mode)
         
         # Retourner le code de sortie approprié
         sys.exit(0 if success else 1)

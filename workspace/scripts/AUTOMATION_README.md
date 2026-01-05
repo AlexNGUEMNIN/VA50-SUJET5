@@ -122,7 +122,7 @@ python3 ~/ros_ws/workspace/scripts/automation_node.py --help
 
 ## ⚡ Utilisation Rapide
 
-### Méthode 1 : Script Direct (Recommandée)
+### Méthode 1 : Script Shell (Recommandée)
 
 ```bash
 # Terminal 1 : Lancer Gazebo avec Tiago
@@ -131,23 +131,32 @@ cd ~/ros_ws/workspace/src
 roslaunch tiago_gazebo.launch
 
 # Terminal 2 : Lancer le pipeline complet
+cd ~/ros_ws/workspace/scripts
+./run_automation.sh
+```
+
+### Méthode 2 : Script Python Direct
+
+```bash
+# Terminal 2 : Après avoir sourcé le workspace
 source ~/ros_ws/workspace/devel/setup.bash
 cd ~/ros_ws/workspace/scripts
 python3 automation_node.py
 ```
 
-### Méthode 2 : Via rosrun
+### Méthode 3 : Avec Arguments
 
 ```bash
-# Terminal 2 : Après avoir sourcé le workspace
-rosrun scripts automation_node.py
-```
+# Pipeline complet
+./run_automation.sh full
 
-### Méthode 3 : Via roslaunch
+# Une seule étape
+./run_automation.sh capture
+./run_automation.sh pipeline
+./run_automation.sh command
 
-```bash
-# Terminal 2 : Lancer via le fichier launch
-roslaunch src/tiago_automation.launch
+# Sans attendre Gazebo
+./run_automation.sh --no-wait
 ```
 
 ---
@@ -395,8 +404,10 @@ VA50-SUJET5/
 ├── workspace/
 │   ├── scripts/
 │   │   ├── automation_node.py    # 🆕 Script d'automatisation principal
+│   │   ├── run_automation.sh     # 🆕 Script shell de lancement
 │   │   ├── capture.py            # Capture d'images Tiago
 │   │   ├── command.py            # Commande du robot
+│   │   ├── AUTOMATION_README.md  # 🆕 Documentation détaillée
 │   │   └── requirements.txt
 │   ├── pipeline/
 │   │   ├── run_pipeline.py       # Pipeline IA principal
@@ -408,7 +419,7 @@ VA50-SUJET5/
 │   │   └── outputs/
 │   └── src/
 │       ├── tiago_gazebo.launch
-│       ├── tiago_automation.launch  # 🆕 Launch file d'automatisation
+│       ├── tiago_automation.launch  # 🆕 Launch file (template)
 │       └── va50/
 ├── build.sh
 ├── server.sh

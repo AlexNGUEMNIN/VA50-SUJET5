@@ -9,12 +9,15 @@
     - Option 1: Lancer le pipeline complet (capture + IA + commande)
     - Option 2: Lancer uniquement une étape spécifique
  
- Usage:
-    roslaunch src/tiago_automation.launch
-    roslaunch src/tiago_automation.launch mode:=capture
-    roslaunch src/tiago_automation.launch mode:=pipeline
-    roslaunch src/tiago_automation.launch mode:=command
-    roslaunch src/tiago_automation.launch wait_for_gazebo:=false
+ Usage (depuis le répertoire workspace):
+    roslaunch workspace/src/tiago_automation.launch
+    roslaunch workspace/src/tiago_automation.launch mode:=capture
+    roslaunch workspace/src/tiago_automation.launch mode:=pipeline
+    roslaunch workspace/src/tiago_automation.launch mode:=command
+    roslaunch workspace/src/tiago_automation.launch wait_for_gazebo:=false
+ 
+ Ou en utilisant le chemin complet:
+    roslaunch ~/ros_ws/workspace/src/tiago_automation.launch
  
  Auteur : R3 - Ingénieur Logiciel & Intégration
  Projet : VA50 - Vision Artificielle et Systèmes Autonomes
@@ -33,36 +36,37 @@
     <arg name="wait_for_gazebo" default="true"
          doc="Attendre que les topics Gazebo soient disponibles"/>
     
-    <!-- Niveau de log -->
-    <arg name="log_level" default="info"
-         doc="Niveau de log ROS: debug, info, warn, error"/>
+    <!-- Chemin du workspace -->
+    <arg name="workspace_path" default="$(env HOME)/ros_ws/workspace"
+         doc="Chemin vers le workspace ROS"/>
 
     <!-- ================================================================== -->
     <!-- NŒUD D'AUTOMATISATION -->
     <!-- ================================================================== -->
     
-    <node pkg="scripts" 
-          type="automation_node.py" 
-          name="tiago_automation_node"
+    <!-- Utilisation du type "python3" avec le chemin absolu du script -->
+    <node name="tiago_automation_node"
+          pkg="roslaunch"
+          type="roslaunch"
           output="screen"
           required="true"
-          respawn="false">
+          respawn="false"
+          args="--wait">
         
-        <!-- Paramètres du nœud -->
-        <param name="mode" value="$(arg mode)"/>
-        <param name="wait_for_gazebo" value="$(arg wait_for_gazebo)"/>
-        
-        <!-- Remapping des topics si nécessaire -->
-        <!-- <remap from="/old_topic" to="/new_topic"/> -->
+        <!-- Le script sera lancé manuellement, ce launch file sert de template -->
         
     </node>
 
-    <!-- ================================================================== -->
-    <!-- INFORMATIONS DE DÉMARRAGE -->
-    <!-- ================================================================== -->
-    
-    <node pkg="rostopic" type="rostopic" name="automation_info" 
-          args="echo -n 1 /tiago/automation_status" 
-          output="screen" launch-prefix="bash -c 'sleep 2 &amp;&amp; exec'"/>
-
 </launch>
+
+<!--
+===============================================================================
+ NOTE: Pour une utilisation simple, préférez lancer le script directement:
+ 
+    cd ~/ros_ws/workspace/scripts
+    python3 automation_node.py
+ 
+ Ce fichier launch est fourni comme référence et template pour une intégration
+ future dans un package ROS complet.
+===============================================================================
+-->
