@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+===============================================================================
+ 🤖 TIAGO AUTOMATION LAUNCH FILE
+===============================================================================
+ 
+ Ce fichier launch orchestre le pipeline complet de réarrangement d'objets :
+ 
+    - Option 1: Lancer le pipeline complet (capture + IA + commande)
+    - Option 2: Lancer uniquement une étape spécifique
+ 
+ Usage:
+    roslaunch src/tiago_automation.launch
+    roslaunch src/tiago_automation.launch mode:=capture
+    roslaunch src/tiago_automation.launch mode:=pipeline
+    roslaunch src/tiago_automation.launch mode:=command
+    roslaunch src/tiago_automation.launch wait_for_gazebo:=false
+ 
+ Auteur : R3 - Ingénieur Logiciel & Intégration
+ Projet : VA50 - Vision Artificielle et Systèmes Autonomes
+===============================================================================
+-->
+<launch>
+    <!-- ================================================================== -->
+    <!-- ARGUMENTS -->
+    <!-- ================================================================== -->
+    
+    <!-- Mode d'exécution: full, capture, pipeline, command -->
+    <arg name="mode" default="full" 
+         doc="Mode d'exécution: full (complet), capture, pipeline, command"/>
+    
+    <!-- Attendre que Gazebo soit prêt -->
+    <arg name="wait_for_gazebo" default="true"
+         doc="Attendre que les topics Gazebo soient disponibles"/>
+    
+    <!-- Niveau de log -->
+    <arg name="log_level" default="info"
+         doc="Niveau de log ROS: debug, info, warn, error"/>
+
+    <!-- ================================================================== -->
+    <!-- NŒUD D'AUTOMATISATION -->
+    <!-- ================================================================== -->
+    
+    <node pkg="scripts" 
+          type="automation_node.py" 
+          name="tiago_automation_node"
+          output="screen"
+          required="true"
+          respawn="false">
+        
+        <!-- Paramètres du nœud -->
+        <param name="mode" value="$(arg mode)"/>
+        <param name="wait_for_gazebo" value="$(arg wait_for_gazebo)"/>
+        
+        <!-- Remapping des topics si nécessaire -->
+        <!-- <remap from="/old_topic" to="/new_topic"/> -->
+        
+    </node>
+
+    <!-- ================================================================== -->
+    <!-- INFORMATIONS DE DÉMARRAGE -->
+    <!-- ================================================================== -->
+    
+    <node pkg="rostopic" type="rostopic" name="automation_info" 
+          args="echo -n 1 /tiago/automation_status" 
+          output="screen" launch-prefix="bash -c 'sleep 2 &amp;&amp; exec'"/>
+
+</launch>

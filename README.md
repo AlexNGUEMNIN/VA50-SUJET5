@@ -26,11 +26,50 @@ Le package `huggingface_bridge` permet au robot Tiago de:
 - `/tiago/hf_status` - Statut en temps réel
 - `/tiago/detected_objects` - Objets détectés
 
+## 🚀 Script d'Automatisation (Nouveau!)
+
+Le script `automation_node.py` orchestre le **pipeline complet** de réarrangement d'objets en 3 étapes :
+
+1. **Capture** : Prise de photos RGB et profondeur via la caméra Xtion
+2. **Pipeline IA** : Détection d'objets, génération d'image cible, calcul des positions
+3. **Commande** : Déplacement du bras robotique vers les objets
+
+### Utilisation Rapide
+
+```bash
+# Terminal 1 : Lancer Gazebo
+source /opt/pal/gallium/setup.bash
+cd ~/ros_ws/workspace/src
+roslaunch tiago_gazebo.launch
+
+# Terminal 2 : Lancer le pipeline complet
+source ~/ros_ws/workspace/devel/setup.bash
+cd ~/ros_ws/workspace/scripts
+python3 automation_node.py
+```
+
+### Modes d'Exécution
+
+```bash
+python3 automation_node.py                  # Pipeline complet
+python3 automation_node.py --mode capture   # Capture uniquement
+python3 automation_node.py --mode pipeline  # Pipeline IA uniquement
+python3 automation_node.py --mode command   # Commande robot uniquement
+python3 automation_node.py --no-wait        # Sans attendre Gazebo
+```
+
+📖 **Documentation complète** : `workspace/scripts/AUTOMATION_README.md`
+
 ## 🏗️ Structure du Projet
 
 ```
 VA50-SUJET5/
 ├── workspace/
+│   ├── scripts/                        # 🆕 Scripts d'automatisation
+│   │   ├── automation_node.py          # Script principal d'orchestration
+│   │   ├── capture.py                  # Capture d'images Tiago
+│   │   ├── command.py                  # Commande du robot
+│   │   └── AUTOMATION_README.md        # Documentation détaillée
 │   ├── pipeline/                       # Pipeline Python IA
 │   │   ├── src/
 │   │   │   ├── detect_objects.py      # Détection Mask R-CNN
@@ -38,7 +77,9 @@ VA50-SUJET5/
 │   │   │   └── generated_image_to_positions.py
 │   │   └── run_pipeline.py
 │   └── src/
-│       ├── huggingface_bridge/        # 🆕 Package ROS Bridge
+│       ├── tiago_gazebo.launch        # Launch Gazebo + Tiago
+│       ├── tiago_automation.launch    # 🆕 Launch du pipeline complet
+│       ├── huggingface_bridge/        # Package ROS Bridge
 │       │   ├── scripts/
 │       │   │   ├── huggingface_bridge_node.py
 │       │   │   ├── test_huggingface_bridge.py
